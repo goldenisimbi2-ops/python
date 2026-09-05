@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+    <h1> Welcome to MyApp</h1>
+    <p>this is a django app project </p>
+    <ul>
+        <li><a href="{%url 'profile_list' %}">view all users</a></li>
+    </ul>
+</div>
+
+{% endblock %}

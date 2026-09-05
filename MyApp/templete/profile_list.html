@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}All Profiles{% endblock %}
+
+{% block content %}
+    <h2>User Profiles</h2>
+
+    {% if profiles %}
+        {% for profile in profiles %}
+            <div class="card">
+                <h3>{{ profile.name }}</h3>
+                <p><strong>Email:</strong> {{ profile.email }}</p>
+                <p><strong>Age:</strong> {{ profile.age }}</p>
+                <a href="{% url 'profile_detail' profile.id %}">View Full Profile →</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="card">
+            <p>No profiles found. Add some through the <a href="/admin/">admin panel</a>.</p>
+        </div>
+    {% endif %}
+{% endblock %}
+{% extends "base.html" %}
+
+{% block title %}All Profiles{% endblock %}
+
+{% block content %}
+    <h2>User Profiles</h2>
+
+    {% if profiles %}
+        {% for profile in profiles %}
+            <div class="card">
+                <h3>{{ profile.name }}</h3>
+                <p><strong>Email:</strong> {{ prof
+                    </div>
+        {% endfor %}
+    {% else %}
+        <div class="card">
+            <p>No profiles found. Add some through the <a href="/admin/">admin panel</a>.</p>
+        </div>
+    {% endif %}
+{% endblock %}

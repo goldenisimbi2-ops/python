@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{{ profile.name }} — Profile{% endblock %}
+
+{% block content %}
+    <div class="card">
+        <h2>{{ profile.name }}</h2>
+
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>Age:</strong> {{ profile.age }} years old</p>
+
+        {% if profile.biography %}
+            <p><strong>Biography:</strong></p>
+            <p>{{ profile.biography }}</p>
+        {% else %}
+            <p><em>No biography provided.</em></p>
+        {% endif %}
+
+        <br>
+        <a href="{% url 'profile_list' %}">← Back to all profiles</a>
+    </div>
+{% endblock %}
